@@ -46,13 +46,13 @@ public class Frog extends Actor
         }
         
         //Check for the down key
-        if( isUpPress == false && Greenfoot.isKeyDown("down") && getY() < 540)
+        if( isDownPress == false && Greenfoot.isKeyDown("down") && getY() < 540)
         {
             setLocation( getX() , getY() + 60);
             isDownPress = true;
         }
         
-        if( isUpPress && !Greenfoot.isKeyDown("down"))
+        if( isDownPress && !Greenfoot.isKeyDown("down"))
         {
             isDownPress = false;
         }        
@@ -60,12 +60,30 @@ public class Frog extends Actor
         
         
         //Check for the right key
+         if( isRightPress == false && Greenfoot.isKeyDown("right") && getY() < 540)
+        {
+            setLocation( getX() + 60 , getY());
+            isRightPress = true;
+        }
         
+        if( isRightPress && !Greenfoot.isKeyDown("right"))
+        {
+            isRightPress = false;
+        }         
         
         
         
         //Check for the left key
+        if( isLeftPress == false && Greenfoot.isKeyDown("left") && getY() < 540)
+        {
+            setLocation( getX()  - 60 , getY());
+            isLeftPress = true;
+        }
         
+        if( isLeftPress && !Greenfoot.isKeyDown("left"))
+        {
+            isLeftPress = false;
+        }          
         
         
         
