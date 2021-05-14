@@ -20,7 +20,7 @@ public class Car extends Actor
      */
     public void act() 
     {
-        move(5);
+        move(speed);
         if(isAtEdge())
         {
             setLocation( 0, getY());
